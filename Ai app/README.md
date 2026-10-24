@@ -1,6 +1,6 @@
 # Next Up — Steam game picker
 
-A student prototype that solves choice overload: paste a public Steam profile, randomly select an owned game, and discover its playtime and store information. Steam-inspired navy, charcoal, cyan and green styling with original Next Up branding. Not affiliated with Valve. Replaces Fridge Quest.
+A student prototype that solves choice overload: paste a public Steam profile, randomly select an owned game, and discover its playtime and store information. Steam-inspired navy, charcoal, cyan and green styling with original Next Up branding. Not affiliated with Valve.
 
 ## Run
 
