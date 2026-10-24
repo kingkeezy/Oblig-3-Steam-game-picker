@@ -1,0 +1,12 @@
+{
+  "name": "next-up",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "start": "node --use-system-ca server.js",
+    "test": "node --test tests.cjs"
+  }
+}

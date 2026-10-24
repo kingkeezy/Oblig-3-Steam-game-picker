@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Next Up — Your Steam game picker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-inner">
+        <a href="./" class="brand"><b>◈</b> NEXT UP <small>BETA</small></a>
+        <nav><a href="#picker">GAME PICKER</a><a href="#library">YOUR LIBRARY</a></nav>
+        <span>Independent Steam companion</span>
+      </div>
+    </header>
+    <main>
+      <div class="subnav">
+        <span>YOUR LIBRARY. YOUR NEXT ADVENTURE.</span
+        ><a href="https://steamcommunity.com/my/" target="_blank" rel="noreferrer"
+          >Find my Steam profile ↗</a
+        >
+      </div>
+      <section class="hero">
+        <p class="eyebrow">TOO MANY GAMES. NOTHING TO PLAY?</p>
+        <h1>Your next game.<br /><span>Leave it to chance.</span></h1>
+        <p>
+          Stop scrolling through your library. Rediscover an old favourite,<br />finally
+          start that untouched game, or let the dice decide.
+        </p>
+        <div class="badges">
+          <span>✓ No Steam login</span><span>✓ Your games, randomly picked</span
+          ><span>✓ Free to use</span>
+        </div>
+        <div class="hero-dice" aria-hidden="true">⚄</div>
+      </section>
+      <section class="connect">
+        <div class="section-label">01 <span>CONNECT YOUR LIBRARY</span></div>
+        <h2>It starts with your Steam profile.</h2>
+        <form id="profile-form">
+          <label for="profile">Steam profile URL or SteamID64</label>
+          <div class="connect-row">
+            <input
+              id="profile"
+              placeholder="https://steamcommunity.com/id/yourname"
+              required
+              autocomplete="url"
+            /><button id="connect-button" class="primary">Load my library →</button>
+          </div>
+        </form>
+        <div class="connect-bottom">
+          <span>Your profile and Game details must be public. No password needed.</span
+          ><button id="demo" class="text-button">
+            Just exploring? Try a demo library ↗
+          </button>
+        </div>
+        <p id="status" role="status">Ready when you are.</p>
+      </section>
+      <section id="picker">
+        <div class="section-header">
+          <div class="section-label">02 <span>FIND YOUR NEXT GAME</span></div>
+          <span id="source-label">NO LIBRARY LOADED</span>
+        </div>
+        <div class="picker-layout">
+          <aside>
+            <h2>Set the mood.</h2>
+            <p>A little direction.<br />A lot of possibility.</p>
+            <label for="play-filter">PLAY HISTORY</label
+            ><select id="play-filter">
+              <option value="all">All games</option>
+              <option value="unplayed">Unplayed only</option>
+              <option value="played">Played before</option></select
+            ><label for="max-hours">TOTAL TIME PLAYED</label
+            ><select id="max-hours">
+              <option value="Infinity">Any playtime</option>
+              <option value="1">Under 1 hour</option>
+              <option value="5">Under 5 hours</option>
+              <option value="10">Under 10 hours</option>
+              <option value="20">Under 20 hours</option>
+              <option value="50">Under 50 hours</option>
+              <option value="100">Under 100 hours</option></select
+            ><label for="search">NARROW IT DOWN</label
+            ><input id="search" placeholder="Search your games…" type="search" /><label
+              class="checkbox"
+              ><input type="checkbox" id="avoid-repeat" checked /> Avoid repeats this
+              session</label
+            >
+            <div class="pool-count">
+              <strong id="pool-count">0</strong><span>games in your pool</span>
+            </div>
+            <button id="pick" class="primary" disabled>⚄ &nbsp; Pick a game</button
+            ><button id="reset" class="text-button">Reset pick history</button>
+            <p id="pick-status" class="small" aria-live="polite"></p>
+          </aside>
+          <div id="selection">
+            <div class="empty">
+              <span>⚄</span>
+              <h2>A whole library of possibilities.</h2>
+              <p>
+                Connect your Steam profile or try the demo.<br />Your next adventure is
+                one click away.
+              </p>
+              <button class="secondary" id="empty-demo">
+                Explore the demo library →
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="library">
+        <div class="section-header">
+          <div>
+            <div class="section-label">03 <span>THE POSSIBILITIES</span></div>
+            <h2>Your library, ready to play.</h2>
+          </div>
+          <span id="library-summary">0 games</span>
+        </div>
+        <div id="game-grid" class="game-grid"></div>
+        <button id="more" class="secondary" hidden>Show more games</button>
+      </section>
+      <section class="how">
+        <div>
+          <span>01 / CONNECT</span>
+          <h3>Bring your backlog.</h3>
+          <p>Paste a public profile link. Your games stay yours.</p>
+        </div>
+        <div>
+          <span>02 / DISCOVER</span>
+          <h3>Give chance a chance.</h3>
+          <p>Pick from everything or give unplayed games a turn.</p>
+        </div>
+        <div>
+          <span>03 / PLAY</span>
+          <h3>Less choosing. More gaming.</h3>
+          <p>Get the details and open the game in Steam.</p>
+        </div>
+      </section>
+      <footer>
+        <span class="brand">◈ NEXT UP</span>
+        <p>
+          Student prototype. Not affiliated with or endorsed by Valve.<br />Steam and game
+          artwork belong to their respective owners.
+        </p>
+      </footer>
+    </main>
+    <script src="core.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
